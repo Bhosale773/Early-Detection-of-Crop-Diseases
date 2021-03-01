@@ -1,0 +1,21 @@
+html,body{
+    background-color: #336666 !important;
+}
+
+h1{
+    font-family: 'Lilita One', cursive;
+    margin-top: 110px !important;
+    margin-bottom: 20px !important;
+}
+h1,h2,p{
+    color:#fff;
+    text-align: center;
+}
+
+.image{
+    height: 400px;
+    width: 400px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.04);
+    display: block;
+    margin: 15px auto;
+}

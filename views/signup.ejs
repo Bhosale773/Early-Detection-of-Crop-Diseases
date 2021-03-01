@@ -1,0 +1,32 @@
+<%- include ('./partials/header') %>
+
+<title>Sign-Up</title>
+<link rel="stylesheet" href="../stylesheets/app.css">
+
+<div class="form">
+    <div class="border">
+        <h3>Sign Up</h3>
+        <form class="form1" action="/sign-up" method="POST">
+            <i class="fas fa-pencil-alt"></i>
+            <input type="text" name="fname" placeholder="First Name*" required>
+            <i class="fas fa-pencil-alt"></i>
+            <input type="text" name="lname" placeholder="Last Name*" required>
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter valid email address" required>
+            <i class="fas fa-mobile-alt"></i>
+            <input type="text" name="contact" placeholder="Contact No*" pattern="[7-9]{1}[0-9]{9}" title="Please enter valid 10 digit contact number" required>
+            <i class="far fa-address-card"></i>
+            <input type="text" name="addressl1" placeholder="Address Line-1*" required>
+            <i class="far fa-address-card"></i>
+            <input type="text" name="addressl2" placeholder="Address Line-2*" required>
+            <i class="fas fa-user-circle"></i>
+            <input type="text" name="username" placeholder="Create Username*" required>
+            <i class="fas fa-unlock-alt"></i>
+            <i class="eyeicon d-none far fa-eye"></i>
+            <input id="passinput" type="password" name="password" placeholder="Create Password*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase, one lowercase letter and at least 8 or more characters" required>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<%- include ('./partials/footer') %>

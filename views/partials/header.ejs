@@ -1,0 +1,93 @@
+<html>
+<head>
+    <!-- connection url for font-awesome icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet"  type='text/css'>  
+    <!-- connection url for  bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- connection url for google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway,Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/header.css" type="text/css">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="/"><img id="logo" src="../images/plant.png"><span class="navbar-text ml-1">CROPIFY</span></a>
+        <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="n-list navbar-nav ml-auto">
+            <li class="home n-item">
+              <a class="n-link" href="/home"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="guide n-item">
+              <a class="n-link register" href="/guide"><i class="fas fa-book-reader"></i> Guide</a>
+            </li> 
+            <% if(!currentUser){ %>
+              <li class="login n-item">
+                <a class="n-link" href="/sign-in"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+              </li>
+              <li class="signup n-item">
+                <a class="n-link register" href="/sign-up"><i class="fas fa-user-alt"></i> Sign Up</a>
+              </li>
+            <% }else{ %>
+              <li class="n-item">
+                <div class="avatar" onclick="document.getElementById('logoutmod').style.display='block'">
+                    <img src="../images/Avatar/male_avatar.png" alt="Icon"> 
+                    <%=currentUser.fname%>
+                </div>
+              </li> 
+            <% } %>       
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <% if(currentUser){ %>
+      <div id="logoutmod" class="mod">
+        <div class="animate mod-content-logout">
+          <span onclick="document.getElementById('logoutmod').style.display='none'" class="cl">&times;</span>
+          <div class="content">
+            <div class="row">
+              <div class="col-2">
+                <img src="../images/Avatar/male_avatar.png" alt="Icon">
+              </div>
+              <div class="col-10 name">
+                <h3><%=currentUser.fname + " " + currentUser.lname%></h3> 
+                <h4><%=currentUser.email%></h4>
+              </div>
+            </div>
+            <button id="historybtn" class="btn btn-info btn-lg" onclick="document.getElementById('history_list').classList.toggle('d-none')">History</button> 
+            <ol id="history_list" class="d-none">
+              <% if(currentUser.history.length===0){ %>
+                <li type="disc">No History Available</li>
+              <% } %>
+              <% for(var i=0; i<currentUser.history.length; i++) { %>
+                <li><%= currentUser.history[i].product + "    -    " + currentUser.history[i].quantity + "    -    " + currentUser.history[i].date.toDateString() %></li>
+              <% } %>
+            </ol> 
+            <a id="logoutbtn" class="btn btn-info btn-lg" href="/logout">Log Out</a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  
+      <div class="container">
+        <% if(error && error.length>0){ %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <%= error %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <% }; %>
+        <% if(success && success.length>0){ %>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <%= success %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+        <% }; %>    
+      </div>
+      

@@ -1,0 +1,394 @@
+/* styling navbar */
+
+#logo{
+    height: 52px;
+}
+
+nav{
+    font-size: 1.1rem;
+    background-color: #e3f2fd;
+    font-weight: 700;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.navbar-brand{
+    color:black !important;
+    font-size: 1.6rem !important;
+    margin: none;
+    padding: 0 !important;
+}
+
+.fa-bars{
+    color:black;
+    font-size: 1.6rem;
+}
+
+.n-link{
+    display: inline-block;
+    margin: none;
+    color:rgb(69, 102, 133);
+    padding: 9px 1px;
+    margin: auto 2px;
+    transition: font-size, background-color 0.1s ease-in-out;
+    width: 8rem;
+    text-align: center;
+}
+
+.n-link:hover, .active{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(69, 102, 133);
+    border-radius: 7px;
+}
+
+.n-link:active{
+    background-color: rgb(104, 136, 165);
+}
+
+.n-list{
+    margin-right: 1rem;
+}
+
+nav ul li img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+nav ul li .avatar{
+    color: rgb(69, 102, 133);
+    font-size: 1.1rem;
+    margin: auto 2px; 
+    cursor: pointer;
+    padding: 3px 10px;
+}
+
+nav ul li .avatar:hover{
+    background-color: rgb(69, 102, 133);
+    color: #fff;
+    border-radius: 7px;
+    font-size: 1.15rem;
+}
+
+/* styling alerts */
+
+.alert{
+    top: 90px;
+    width: 100%;
+    z-index: 2;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+/* styling popup window */
+
+/* The Modal (background) */
+.mod {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* mod-content for logout popup */
+
+.mod-content-logout {
+    background-color: #e5ebeafd;
+    max-width: 600px;
+    margin: 15vh 32% 0 32%; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+}
+
+.mod-content-logout img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.mod-content-logout .content{
+    padding: 15px;
+    z-index: 1;
+}
+
+.mod-content-logout h3, .mod-content-logout h4{
+    margin-left: 40px;
+}
+
+.mod-content-logout .content .name{
+    margin-top: 10px;
+}
+
+.mod-content-logout #historybtn{
+    margin: 20px 5% 10px 5%;
+    width: 90%;
+    font-weight: 500;
+}
+.mod-content-logout #logoutbtn{
+    margin: 10px 5%;
+    width: 90%;
+    font-weight: 500;
+}
+
+.mod-content-logout #history_list li{
+    margin: 5px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(94, 62, 14);
+}
+
+/* mod-content for product enquiry popup */
+
+.mod-content {
+    background-color: #e5ebeafd;
+    width: 60vw;
+    margin: 10vh 20vw;
+    border: 1px solid #888;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mod .mod-content h2{
+    color: rgb(94, 9, 9);
+    font-weight: 600;
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.mod .mod-content img{
+    width: 90%;
+    height: 80%;
+    margin: 10% 5%;
+    margin-top: 15%;
+    margin-left: 15%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mod .mod-content form{
+    padding: 10px 15px;
+    margin-left: 20px;
+    width: 90%;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+.mod .mod-content form label{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: steelblue;
+}
+
+.mod .mod-content form input, .mod .mod-content form select{
+    font-size: 1 rem !important;
+    font-weight: 500;
+    height: 2rem;
+    margin: 0px 10px;
+}
+
+.mod .mod-content form input#typeOfDelivery, .mod .mod-content form input#currentPrice{
+    height: 1rem;
+    width: 1rem !important;
+}
+
+.mod .mod-content .submit{
+    margin-top: 2px !important;
+}
+
+.mod .mod-content .customer-info{
+    padding: 10px 15px;
+    line-height: 0.8;
+    margin-left: 15px;
+}
+
+.mod .mod-content .customer-info h4{
+    font-weight: 500;
+    color: steelblue;
+    margin-bottom: 15px;
+}
+  
+/* The Close Button (x) */
+.mod .mod-content .cl, .mod .mod-content-logout .cl{
+    float: right;
+    color: #000;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-top: -0.6rem;
+    margin-right: 0.9rem;
+}
+  
+.mod .mod-content .cl:hover, .mod .mod-content-logout .cl:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation for mod */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+/* ========================================== */
+/* responsive styling for mobile, tablet view */
+/* ========================================== */
+
+@media (max-width: 325px){
+    #logo{
+        width: 210px;
+    }
+    .mod-content-logout h3{
+        font-size: 1rem !important;
+        margin-left: 25px !important;
+    }
+    .mod-content-logout h4{
+        font-size: 0.8rem;
+        margin-left: 25px !important;
+    }
+}
+
+@media (max-width: 420px){
+    #logo{
+        width: 260px;
+    }
+    .mod .mod-content .col-sm-4{
+        display: none;
+    }
+}
+
+@media(max-width: 570px){
+    .mod .mod-content .col-sm-4{
+        display: none;
+    }
+}
+
+@media (max-width: 992px){
+    nav .avatar{
+        width: 100%;
+        margin-top: 0.2rem !important;
+        margin-bottom: 0.2rem !important;
+        padding: 2px !important;
+        text-align: center;
+    }
+    .n-list{
+        margin-top: 0.5rem;
+        margin-right: 0;
+    }
+    nav .n-link{
+        width: 100%;
+        margin-top: 0.3rem !important;
+        margin-bottom: 0.3rem !important;
+        padding: 6px !important;
+        border-top: 1px solid gray;
+    }
+    nav .avatar, nav .register{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+    .mod-content {
+        width: 90% !important;
+        margin: 8vh auto 0 auto !important;
+    }
+    .mod .mod-content h2{      
+        font-size: 1.3rem !important;
+        padding: 10px 20px;
+        border-bottom: 1px solid rgba(0,0,0, 0.1);
+    }
+    .mod .mod-content form{
+        padding: 10px !important;
+        margin: 5px !important;
+        width: 95% !important;
+    }
+    .mod .mod-content form label{
+        font-size: 1.1rem !important;
+    }
+    .mod .mod-content form input{
+        height: 1.8rem !important;
+        margin: 0px 5px !important;
+        width: 130px;
+    }
+    .mod .mod-content form select{
+        height: 1.8rem !important;
+        margin: 0px 5px !important;
+    }
+    .mod .mod-content form input#typeOfDelivery, .mod .mod-content form input#currentPrice{
+        height: 0.8rem !important;
+    }
+    .mod .mod-content p{
+        margin-bottom: 5px !important;
+    }
+    .mod .mod-content .customer-info{
+        font-size: 0.9rem !important;
+        line-height: 1.2 !important;
+    }
+    .mod .mod-content .customer-info h4{
+        font-size: 1.2rem !important;
+        margin-bottom: 5px !important;
+    }
+    .mod .mod-content .cl, .mod .mod-content-logout .cl{
+        font-size: 1.7rem !important;
+        margin-right: 0.4rem !important;
+    }
+}
+
+@media (max-width: 1024px){
+    .mod-content-logout{
+        margin: 15vh auto 0 auto !important;
+        width: 90%;
+    }
+    .mod-content-logout img{
+        width: 60px !important;
+    }
+    .mod-content-logout h3{
+        font-size: 1.2rem;
+        margin-left: 20px !important;
+    }
+    .mod-content-logout h4{
+        font-size: 1rem;
+        margin-left: 20px !important;
+    }
+    .mod-content-logout .name{
+        margin-top: 5px !important;
+    }
+    .mod-content-logout #historybtn{
+        margin: 15px 5% 5px 5% !important;
+        font-size: 1.1rem !important;
+        height: 40px;
+    }
+    .mod-content-logout #logoutbtn{
+        margin: 5px 5% !important;
+        font-size: 1.1rem !important;
+        height: 40px;
+    }
+    .mod-content-logout #history_list li{
+        margin: 5px 0px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media(width: 1024px){
+    .mod .mod-content{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+}
+

@@ -1,0 +1,128 @@
+html,body{
+    background-color: #336666 !important;
+}
+
+.form{
+    max-width: 490px;
+    margin: 120px auto 5px auto;
+}
+
+.form .border{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form h3{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 5px 0 25px 0;
+    color: steelblue;
+}
+
+.form form{
+    width: 90%;
+    margin: auto;
+}
+
+.form select{
+    cursor: pointer;
+}
+
+.form form input, .form select{
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    margin: 10px 10px 10px 5%;
+    padding-left: 55px;
+    height: 2.7rem;
+    border: none;
+    border: 1px solid rgb(151, 154, 156);
+    border-radius: 5px;
+}
+
+.form i{
+    color: gray;
+    font-size: 1.7rem;
+    position: absolute;
+    padding: 8px 25px 8px 35px; 
+    min-width: 40px; 
+}
+
+.eyeicon{
+    margin-left: 355px;
+    font-size: 1.3rem !important;
+    padding: 10px 20px !important; 
+}
+
+.eyeicon:active{
+    color: steelblue;
+}
+
+
+.form form input:focus{
+    border: none;
+    border: 2px solid steelblue;
+}
+
+.form form .btn{
+    width: 90%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 10px 10px 5%;
+}
+
+.form form .btn i{
+    color: #fff;
+    padding: 4px 25px 8px 15px; 
+}
+
+.form .quote p{
+    text-align: center;
+    padding: 10px 30px;
+    margin: auto;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form .quote p a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* make login page responsive */
+
+@media (max-width: 325px){
+    .form{
+        max-width: 300px !important;
+    }
+    .eyeicon{
+        margin-left: 220px !important;
+    }
+}
+
+@media (max-width: 500px){
+    .form{
+        max-width: 340px;
+        margin: 70px auto 50px auto;
+    }
+    .eyeicon{
+        margin-left: 255px;
+    }
+}
+
+@media (max-height: 450px){
+    .form{
+        max-width: 340px;
+        margin: 70px auto 50px auto;
+    }
+    .eyeicon{
+        margin-left: 255px;
+    }
+}

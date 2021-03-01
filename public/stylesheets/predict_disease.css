@@ -1,0 +1,168 @@
+html,body{
+    background: #336666;
+}
+
+.upload-btn-wrapper{
+    position: relative;
+    overflow:hidden;
+    display:inline-block;
+    cursor:pointer;
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    margin: 110px 0px 20px 0px;
+}
+.upload-file{
+    border:2px solid #eee;
+    color:#9b9b9b;
+    background-color: #003333;
+    /* background-color: #336633; */
+    width:100%;
+    height:230px;
+    border-radius: 8px;
+    font-size:15px;
+    cursor: pointer;
+}
+.upload-btn-wrapper input[type=file]{
+    width:100%;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    opacity: 0;
+    cursor: pointer;
+    min-height: 300px;
+}
+.success-1, .success-2{
+    display:none;
+    color: #fff;
+}
+.success-1 i, .success-2 i{
+    font-size: 18px !important;
+    margin-left:6px;
+    margin-top:4px;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+    padding: 5px;
+    border-radius: 50%;
+}
+.font-50{
+    font-size:50px;
+}
+.d-block{
+    display:block;
+}
+.btn .upload-file{
+    font-size: 30px;
+}
+.upload-btn{
+    display:block;
+    font-size: 18px;
+    color: #fff;
+}
+
+.upload-btn i{
+    font-size: 100px;
+}
+
+.box img{
+    width: 95%;
+    height: 300px;
+    display: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    height: 320px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: 20px auto;
+}
+    
+.box{
+    width: 45%;
+}
+
+.box-result #myButton{
+    background: #003333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: None;
+    text-decoration: None;
+    border: 1px solid #fff;
+    width: 100%;
+}
+
+.box-result #myButton:hover{
+    background: #003344;
+}
+
+.box-result{
+    display: none;
+}
+
+.box-result h2{
+    color: #fff;
+    text-align: center;
+}
+
+.accuracy{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+.progress {
+width: 130px;
+height: 130px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.progress > .inner {
+position: absolute;
+color: limegreen; 
+border: 1px solid #9b9b9b;
+}
+
+.progress > svg {
+height: 100%;
+display: block;
+}
+
+.init_status{
+    background: #003333;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: ease-in-out .5s;
+    text-align: center;
+    margin: 20px 0px 35px 0px;
+    border: 1px solid #fff;
+}
+
+@media (max-width: 768px){
+    .box{
+        width: 100%;
+    }
+}
+
+.tutorial{
+    text-align: center;
+    color: #222222;
+}
+
+path {
+    stroke: limegreen;
+    stroke-width: 10;
+    fill-opacity: 0.2;
+}

@@ -1,0 +1,43 @@
+<%- include ('./partials/header') %>
+
+<title>Predict Disease</title>
+<link rel="stylesheet" href="../stylesheets/predict_disease.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="upload-btn-wrapper">
+        <button class="btn upload-file font-weight-500">
+            <span class="upload-btn">
+                <i class="material-icons d-block font-50 pb-2">cloud_upload</i>
+                <p id="choose-text-1">Choose Image of Crop</p>
+            </span>
+            <span class="upload-select-button" id="blankFile-1">
+            </span>
+            <span class="success-1">
+                <i class="material-icons text-success">check</i>
+            </span>
+        </button>
+        <input type="file" name="uploadImage" id="uploadImage">
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <img src="" alt="" id="image" width="224" height="224">
+        </div>
+
+        <div class="box box-result">
+            <div class="init_status"></div>
+            <div>
+                <h2>Your Crop Is Infected With:</h2>
+                <h2 class="pred_class"></h2>
+            </div>
+            <button id="myButton"> GET COMPLETE DIAGNOSIS</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/2.0.1/tf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+<script src="../scripts/script.js"></script>
+
+<%- include ('./partials/footer') %>
