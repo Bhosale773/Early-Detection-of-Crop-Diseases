@@ -259,9 +259,9 @@ nav ul li .avatar:hover{
 /* ========================================== */
 
 @media (max-width: 325px){
-    #logo{
+    /* #logo{
         width: 210px;
-    }
+    } */
     .mod-content-logout h3{
         font-size: 1rem !important;
         margin-left: 25px !important;
@@ -273,15 +273,18 @@ nav ul li .avatar:hover{
 }
 
 @media (max-width: 420px){
-    #logo{
+    /* #logo{
         width: 260px;
-    }
+    } */
     .mod .mod-content .col-sm-4{
         display: none;
     }
 }
 
 @media(max-width: 570px){
+    #logo{
+        height: 45px;
+    }
     .mod .mod-content .col-sm-4{
         display: none;
     }
