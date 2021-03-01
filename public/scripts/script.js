@@ -108,5 +108,5 @@ console.log(diseaseName);
 
 document.getElementById("myButton").onclick = function () {
     console.log(diseaseName);
-    location.href = "/diagnosis/"+diseaseName.replaceAll(" ","_");
+    location.href = "/diagnosis/"+diseaseName.split(" ").join("_");
 };

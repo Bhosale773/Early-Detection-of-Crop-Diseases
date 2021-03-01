@@ -143,6 +143,12 @@ nav ul li .avatar:hover{
     color: rgb(94, 62, 14);
 }
 
+.mod-content-logout #history_list{
+    height: 130px;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+
 /* mod-content for product enquiry popup */
 
 .mod-content {

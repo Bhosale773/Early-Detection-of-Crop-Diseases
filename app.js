@@ -7,6 +7,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 var flash                 = require("connect-flash");
 var dotenv                = require("dotenv");
 var mongoose              = require("mongoose");
+var diagnosis             = require("./treatments");
 
 dotenv.config();
 
@@ -15,11 +16,8 @@ mongoose.connect(process.env.DATABASEURL, {useNewUrlParser:true, useUnifiedTopol
 mongoose.set('useFindAndModify', false);
 
 var historySchema = new mongoose.Schema({
-    product: String,
-    quantity: String,
-    typeOfDelivery: String,
-    want_to_know_currentPrice: String,
-    date: {type: Date, default: Date.now()}
+    date: {type: Date, default: Date.now()},
+    diseaseName: String
  });
 
 var History = mongoose.model("History", historySchema);
@@ -122,6 +120,34 @@ app.post("/sign-up", function(req, res){
 
 app.get("/crop/:cropName",function(req,res){
     res.render("predict_disease");
+});
+
+app.get("/diagnosis/:disease",function(req,res){
+    res.render("diagnosis",{diagnosis:diagnosis[req.params.disease],dis:req.params.disease.split("_").join(" ")});
+    if(req.user){
+        History.create({
+            diseaseName: req.params.disease
+        },function(err, history){
+            if(err){
+                req.flash("error", "Something Went Wrong, Try Again.")
+                res.redirect("back");
+            }
+            User.findOne({username: req.user.username},function(err, user){
+                if(err){
+                    req.flash("error", "Something Went Wrong, Try Again.")
+                    res.redirect("back");
+                }else{
+                    user.history.push(history);
+                    user.save(function(err, data){
+                        if(err){
+                            req.flash("error", "Something Went Wrong, Try Again.")
+                            res.redirect("back");
+                        }
+                    });
+                }
+            });
+        });
+    }
 });
 
 

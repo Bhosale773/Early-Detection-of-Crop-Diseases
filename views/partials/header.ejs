@@ -63,7 +63,7 @@
                 <li type="disc">No History Available</li>
               <% } %>
               <% for(var i=0; i<currentUser.history.length; i++) { %>
-                <li><%= currentUser.history[i].product + "    -    " + currentUser.history[i].quantity + "    -    " + currentUser.history[i].date.toDateString() %></li>
+                <li><%= currentUser.history[i].date.toDateString() + "    -    " + currentUser.history[i].diseaseName %>    -    <a href= <%= /diagnosis/+ currentUser.history[i].diseaseName %>>Get Diagnosis</a> </li>
               <% } %>
             </ol> 
             <a id="logoutbtn" class="btn btn-info btn-lg" href="/logout">Log Out</a>

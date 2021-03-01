@@ -1,0 +1,21 @@
+<%- include ('./partials/header') %>
+
+<title>Diagnosis</title>
+<link rel="stylesheet" href="../stylesheets/diagnosis.css">
+
+<section class="diagnosis">
+    <div class="container">
+        <h2 class="title"><%= dis %></h2>
+        <h4 class="title">Symptoms:</h4>
+        <p class="content"><%= diagnosis.symptoms %></p>
+        <h4 class="title">Causes:</h4>
+        <p class="content"><%= diagnosis.causes %></p>
+        <h4 class="title">Chemical Control:</h4>
+        <p class="content"><%= diagnosis.chemControl %></p>
+        <h4 class="title">Biological Control:</h4>
+        <p class="content"><%= diagnosis.bioControl %></p>
+    </div>
+</section>    
+
+
+<%- include ('./partials/footer') %>
