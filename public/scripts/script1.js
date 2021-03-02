@@ -25,3 +25,25 @@ $(document).ready(function() {
         clearInterval(timeOut);
     });
 });
+
+// Get the modal
+
+var modal = document.querySelectorAll('.mod');
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function(event) {
+    for(var i=0; i<modal.length; i++){
+        if (event.target == modal[i]) {
+            modal[i].style.display = "none";
+        }
+    }
+}
+
+// make navbar collapsed when avatar icon is clicked
+
+$("nav .avatar").on("click",function(){
+    $("nav .navbar-toggler").addClass("collapsed");
+    $("nav .navbar-toggler").attr("aria-expanded","false");
+    $("nav .navbar-collapse").removeClass("show");
+});

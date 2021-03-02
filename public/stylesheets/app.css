@@ -103,7 +103,10 @@ html,body{
         max-width: 300px !important;
     }
     .eyeicon{
-        margin-left: 220px !important;
+        margin-left: 230px !important;
+    }
+    .form .border{
+        margin-top: 100px;
     }
 }
 
@@ -113,7 +116,10 @@ html,body{
         margin: 70px auto 50px auto;
     }
     .eyeicon{
-        margin-left: 255px;
+        margin-left: 230px;
+    }
+    .form .border{
+        margin-top: 100px;
     }
 }
 
@@ -123,6 +129,9 @@ html,body{
         margin: 70px auto 50px auto;
     }
     .eyeicon{
-        margin-left: 255px;
+        margin-left: 230px;
+    }
+    .form .border{
+        margin-top: 100px;
     }
 }

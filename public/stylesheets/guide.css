@@ -7,6 +7,7 @@ h1{
     margin-top: 110px !important;
     margin-bottom: 20px !important;
 }
+
 h1,h2,p{
     color:#fff;
     text-align: center;
@@ -18,4 +19,21 @@ h1,h2,p{
     box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.04);
     display: block;
     margin: 15px auto;
+    border-radius: 5%;
+}
+
+
+@media(max-width: 576px){
+    h1{
+        margin-top:90px !important;
+        font-size: 3rem;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+    .image{
+        height: 330px;
+        width: 100%;
+        margin: 15px auto;
+    }
 }

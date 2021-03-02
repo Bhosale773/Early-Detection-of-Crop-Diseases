@@ -166,3 +166,52 @@ path {
     stroke-width: 10;
     fill-opacity: 0.2;
 }
+
+@media(max-width: 576px){
+    .upload-btn-wrapper{
+        margin: 90px 0px 10px 0px;
+    }
+    .upload-file{
+        height:180px;
+    }
+    .upload-btn{
+        font-size: 16px;
+    }
+    .upload-btn i{
+        font-size: 70px;
+    }
+    .success-1, .success-2{
+        font-size: 10px;
+    }
+    .success-1 i, .success-2 i{
+        font-size: 10px !important;
+        margin-top:0px;
+        padding: 2px;
+    }
+    .box img{
+        width: 100%;
+        height: 260px;
+    }
+    
+    .row{
+        margin: 10px auto;
+    }
+        
+    .box{
+        width: 100%;
+    }
+    
+    .box-result #myButton{
+        padding: 10px;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    .init_status{
+        padding: 10px;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .box-result h2{
+        font-size: 1.7rem;
+    }
+}

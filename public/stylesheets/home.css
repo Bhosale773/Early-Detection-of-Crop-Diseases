@@ -54,3 +54,9 @@ h5{
 .cont:hover .btn {
     display:block;
 }
+
+@media(max-width: 576px){
+    .cont img {
+        height: 150px;
+    }
+}

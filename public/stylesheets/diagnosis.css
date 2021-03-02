@@ -14,3 +14,7 @@ html,body{
 .diagnosis .title, .diagnosis .content{
     color: #fff;
 }
+
+.diagnosis .content{
+    text-align: justify;
+}
