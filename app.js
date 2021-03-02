@@ -12,6 +12,7 @@ var diagnosis             = require("./treatments");
 dotenv.config();
 
 mongoose.set('useCreateIndex', true);
+// mongoose.connect("mongodb://localhost:27017/crop_disease_detection_db",{useNewUrlParser:true, useUnifiedTopology: true});
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser:true, useUnifiedTopology: true});
 mongoose.set('useFindAndModify', false);
 
