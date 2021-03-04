@@ -120,7 +120,7 @@ app.post("/sign-up", function(req, res){
 
 
 app.get("/crop/:cropName",function(req,res){
-    res.render("predict_disease");
+    res.render("predict_disease",{cropName:req.params.cropName});
 });
 
 app.get("/diagnosis/:disease",function(req,res){
