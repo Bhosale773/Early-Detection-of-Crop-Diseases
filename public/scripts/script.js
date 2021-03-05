@@ -3,22 +3,12 @@ let class_indices;
 let fileUpload = document.getElementById('uploadImage')
 let img = document.getElementById('image')
 let boxResult = document.querySelector('.box-result')
-// let confidence = document.querySelector('.confidence')
 let pconf = document.querySelector('.box-result #myButton')
 var diseaseName = ""
 var cropName = document.getElementById('cropName').textContent
 
-        
-// let progressBar = 
-//     new ProgressBar.Circle('#progress', {
-//     color: 'limegreen',
-//     strokeWidth: 10,
-//     duration: 2000, // milliseconds
-//     easing: 'easeInOut'
-// });
-
 async function fetchData(){
-    // let response = await fetch('../class_indices.json');
+    // let response = await fetch('../models/all_crops/class_indices.json');
     let response = await fetch('../models/'+cropName+'/class_indices.json');
     let data = await response.json();
     data = JSON.stringify(data);
@@ -31,7 +21,7 @@ async function fetchData(){
 async function initialize() {
     let status = document.querySelector('.init_status')
     status.innerHTML = 'Loading Model .... <span class="fa fa-spinner fa-spin"></span>'
-    // model = await tf.loadLayersModel('../tensorflowjs_model/model.json');
+    // model = await tf.loadLayersModel('../models/all_crops/tensorflowjs_model/model.json');
     model = await tf.loadLayersModel('../models/'+cropName+'/tensorflowjs_model/model.json');
     status.innerHTML = 'Model Loaded Successfully  <span class="fa fa-check"></span>'
 }
@@ -51,24 +41,15 @@ async function predict() {
             class_idx = Array.from(predicted_class.dataSync())[0]
             document.querySelector('.pred_class').innerHTML = data[class_idx]
             diseaseName=data[class_idx]
-            // document.querySelector('.inner').innerHTML = `${parseFloat(prediction[class_idx]*100).toFixed(2)}% SURE`
             console.log(data)
             console.log(class_idx)
             console.log(data[class_idx])
             console.log(prediction)
-
-            // progressBar.animate(prediction[class_idx]-0.005); // percent
-
             pconf.style.display = 'block'
-
-            // confidence.innerHTML = Math.round(prediction[class_idx]*100)
-
         }
     );
     
 }
-
-
 
 fileUpload.addEventListener('change', function(e){
     
