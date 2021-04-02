@@ -83,6 +83,10 @@ app.get("/guide",function(req,res){
     res.render("guide");
 });
 
+app.get("/contact-us",function(req,res){
+    res.render("contact");
+});
+
 app.get("/sign-in",function(req,res){
     res.render("signin");
 });
@@ -109,12 +113,13 @@ app.post("/sign-up", function(req, res){
     User.register(new User({username: req.body.username, fname: req.body.fname, lname: req.body.lname, email: req.body.email, contact: req.body.contact, addressl1: req.body.addressl1, addressl2: req.body.addressl2}), req.body.password, function(err, user){
         if(err){
             req.flash("error", err.message);
-            res.redirect("/signup");
+            res.redirect("/sign-up");
+        }else{
+            passport.authenticate("local")(req, res, function(){
+                req.flash("success", "You have registered successfully.");
+                res.redirect("/home");
+            });
         }
-        passport.authenticate("local")(req, res, function(){
-            req.flash("success", "You have registered successfully.");
-            res.redirect("/home");
-        });
     });
 });
 

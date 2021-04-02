@@ -1,0 +1,36 @@
+html,body{
+    background-color: #336666 !important;
+}
+
+h1{
+    font-family: 'Girassol', cursive;
+}
+#contact_us{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+#contact_us .border{
+    border: 1px solid rgba(0,0,255,0.2) !important;
+    padding: 10px 40px;
+    background-color: rgba(210,210,210,0.06);
+}
+#contact_us .title{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 10px 0 30px 0;
+    color: steelblue;
+}
+#contact_us .bg-pink{
+    background:#e3f2fd ;
+    color: #333;
+  }
+#contact_us .text i{
+    font-size: 1.5rem;
+    color: rgb(75, 68, 68);
+    padding-bottom: 10px;
+}
+#contact_us .card-body
+{
+    height: 200px;
+} 
