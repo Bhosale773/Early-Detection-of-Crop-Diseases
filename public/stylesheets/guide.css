@@ -28,8 +28,8 @@ h1,h2,p{
         margin-top:90px !important;
         font-size: 3rem;
     }
-    p{
-        margin-bottom: 40px;
+    .secondHead{
+        margin-top: 25px;
     }
     .image{
         height: 330px;
